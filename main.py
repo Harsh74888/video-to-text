@@ -19,7 +19,7 @@ def translate_text_phi(text, target_languages):
             model="phi",
             messages=[{"role": "user", "content": prompt}]
         )
-        # ✅ Correct way to extract translated content
+        #  Correct way to extract translated content
         translations[lang] = response["message"]["content"]
     return translations
 
@@ -58,4 +58,5 @@ if __name__ == "__main__":
         save_to_file(filename, translated_text)
         print(f"Translation in {lang} saved to {filename}")
 
-    print("✅ All done!")
+    print("All done!")
+
